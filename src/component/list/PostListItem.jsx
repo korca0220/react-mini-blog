@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: calc(100%-32px);
+  width: calc(100% - 32px);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@ const TitleText = styled.p`
   font-weight: 500;
 `;
 
-export default function PostListItem(props) {
+function PostListItem(props) {
   const { post, onClick } = props;
 
   return (
@@ -30,3 +31,5 @@ export default function PostListItem(props) {
     </Wrapper>
   );
 }
+
+export default PostListItem;

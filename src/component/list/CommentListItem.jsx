@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: calc(100%-32px);
+  width: calc(100% - 32px);
   padding: 8px 16px;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@ const ContentText = styled.p`
   white-space: pre-wrap;
 `;
 
-export default function CommentListItem(props) {
+function CommentListItem(props) {
   const { comment } = props;
 
   return (
@@ -30,3 +31,5 @@ export default function CommentListItem(props) {
     </Wrapper>
   );
 }
+
+export default CommentListItem;

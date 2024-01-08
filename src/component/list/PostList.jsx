@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function PostList(props) {
+function PostList(props) {
   const { posts, onClickItem } = props;
 
   return (
@@ -25,9 +26,11 @@ export default function PostList(props) {
             onClick={() => {
               onClickItem(post);
             }}
-          ></PostListItem>
+          />
         );
       })}
     </Wrapper>
   );
 }
+
+export default PostList;
